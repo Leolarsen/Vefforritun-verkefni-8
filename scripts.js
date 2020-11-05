@@ -13,8 +13,19 @@
  * @param {string} alphabet Stafróf sem afkóða á út frá
  * @returns {string} Upprunalegi strengurinn hliðraður um n til hægri
  */
-function encode(str, n, alphabet = '') {
-  return '';
+function encode(str, n, alphabet = string) {
+ let string = '';
+ for(let i = 0;  i < str.length; i++) {
+   let letter = str.charAt(i);
+
+   let number = positioning + parseInt(n)
+
+   let positioning = alphabet.indexOf(letter);
+  
+  number = nuber %32
+
+ }
+  return string;
 }
 
 /**
@@ -25,8 +36,16 @@ function encode(str, n, alphabet = '') {
  * @param {string} alphabet Stafróf sem afkóða á út frá
  * @returns {string} Upprunalegi strengurinn hliðraður um n til vinstri
  */
-function decode(str, n, alphabet = '') {
-  return '';
+function decode(str, n, alphabet = string) {
+  let string = '';
+  let x = '';
+  for(let i = 0; i<str.length; i++){
+    let letter = str.charAt(i);
+    let positioning = alphabet.indexOf(letter);
+    if((positioning-parseInt(n))>=0) {x = alphabet.charAt((positioning-parseInt(n)));
+    }
+  }
+  return string;
 }
 
 const Caesar = (() => {
@@ -46,6 +65,8 @@ const Caesar = (() => {
   return {
     init,
   };
+
+  function 
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
